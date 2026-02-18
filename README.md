@@ -65,6 +65,15 @@ No necesitas comprar dominio para publicar gratis.
 
 > Importante: este repositorio no incluye archivo `CNAME`, por lo que está preparado para usar la URL gratuita de GitHub Pages sin dominio propio.
 
+### Si desplegó pero se sigue viendo la versión vieja
+
+1. Verifica que el workflow se ejecutó para el commit más reciente.
+2. Si ejecutas manualmente (**Run workflow**), usa el input `deploy_ref` y pon la rama correcta (`work` o `main`).
+3. Abre la URL en modo incógnito o haz recarga forzada (**Ctrl+F5 / Cmd+Shift+R**).
+4. Revisa que en **Actions** el job termine en verde y que en **Pages** aparezca el último "deployment".
+
+> Nota: `index.html` ya referencia assets versionados (`styles.css?v=20260218` y `script.js?v=20260218`) para reducir problemas de caché del navegador/CDN.
+
 ---
 
 ## Estructura
