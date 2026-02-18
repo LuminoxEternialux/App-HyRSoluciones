@@ -14,12 +14,24 @@
   </head>
   <body>
     <div class="bg-overlay" aria-hidden="true"></div>
-    <header class="hero section">
+
+    <header class="topbar">
+      <div class="brand">H&amp;R Soluciones</div>
+      <nav aria-label="Principal">
+        <a href="#empresa">Empresa</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <header class="hero section reveal" id="empresa">
       <div class="logo-circle">HR</div>
       <p class="tag">Con más de 15 años de experiencia</p>
       <h1>H&amp;R Soluciones Integrales</h1>
       <p class="lead">
-        Reparación y mantenimiento en sistemas de bombeo y motores eléctricos.
+        Reparación, supervisión y mantenimiento en sistemas de bombeo y motores
+        eléctricos para empresas e industria.
       </p>
       <div class="pill-grid">
         <span class="pill">Soporte avanzado y seguridad</span>
@@ -29,7 +41,7 @@
     </header>
 
     <main>
-      <section class="section about">
+      <section class="section reveal">
         <h2>¿Quiénes somos?</h2>
         <p>
           Somos una empresa costarricense especializada en soluciones
@@ -39,34 +51,75 @@
         </p>
       </section>
 
-      <section class="section services">
+      <section class="section reveal" id="servicios">
         <h2>Nuestros servicios</h2>
-        <div class="service-cards">
-          <article class="card">
+
+        <div class="tabs" role="tablist" aria-label="Servicios">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tab1" id="btn-tab1">
+            Reparación
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab2" id="btn-tab2">
+            Mantenimiento
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="tab3" id="btn-tab3">
+            Soporte
+          </button>
+        </div>
+
+        <div class="tab-panels">
+          <article class="tab-panel active" id="tab1" role="tabpanel" aria-labelledby="btn-tab1">
             <h3>Reparación especializada</h3>
             <p>
               Diagnóstico y reparación de bombas, tableros de control y motores
-              eléctricos industriales.
+              eléctricos industriales, con enfoque en continuidad operativa.
             </p>
           </article>
-          <article class="card">
+
+          <article class="tab-panel" id="tab2" role="tabpanel" aria-labelledby="btn-tab2" hidden>
             <h3>Mantenimiento programado</h3>
             <p>
               Planes de mantenimiento preventivo para mejorar rendimiento,
-              seguridad y vida útil de sus equipos.
+              seguridad y vida útil de equipos críticos.
             </p>
           </article>
-          <article class="card">
+
+          <article class="tab-panel" id="tab3" role="tabpanel" aria-labelledby="btn-tab3" hidden>
             <h3>Soporte en campo</h3>
             <p>
-              Atención rápida y asesoría técnica para resolver incidencias y
-              optimizar la operación.
+              Atención rápida y asesoría técnica para resolver incidencias,
+              optimizar procesos y reducir tiempos de parada.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="section contact">
+      <section class="section reveal" id="proyectos">
+        <h2>Trabajos realizados (sección editable)</h2>
+        <p class="section-note">
+          Espacios listos para que luego agreguen fotos y videos de proyectos de
+          la empresa.
+        </p>
+
+        <div class="portfolio-grid">
+          <article class="media-card">
+            <h3>Proyecto 01</h3>
+            <div class="media-placeholder">Espacio para imagen</div>
+            <p>Descripción breve del trabajo realizado.</p>
+          </article>
+          <article class="media-card">
+            <h3>Proyecto 02</h3>
+            <div class="media-placeholder">Espacio para video</div>
+            <p>Descripción breve del trabajo realizado.</p>
+          </article>
+          <article class="media-card">
+            <h3>Proyecto 03</h3>
+            <div class="media-placeholder">Espacio para imagen</div>
+            <p>Descripción breve del trabajo realizado.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contacto">
         <h2>Contacto directo</h2>
         <ul>
           <li><strong>Supervisión y Electromecánica:</strong> Osmar Saravia Silva — 7053 7936</li>
@@ -76,7 +129,7 @@
         </ul>
       </section>
 
-      <section class="section cta" id="solicitar-info">
+      <section class="section cta reveal" id="solicitar-info">
         <h2>Solicitar más información</h2>
         <p>
           Ingrese su correo y se abrirá automáticamente un mensaje para enviarlo

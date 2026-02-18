@@ -26,6 +26,11 @@ npm start
 
 También levanta el sitio en `http://localhost:8080`.
 
+### ¿Los cambios se ven en tiempo real?
+
+- **En local**: sí, normalmente con guardar y recargar el navegador se reflejan de inmediato.
+- **En GitHub Pages**: no es instantáneo al guardar localmente. Primero debes hacer `git push` y esperar el workflow de deploy (1 a 3 minutos aprox.).
+
 ---
 
 ## Crear un link gratis con GitHub Pages
