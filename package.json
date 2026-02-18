@@ -1,0 +1,9 @@
+{
+  "name": "hr-soluciones-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "./run-local.sh 8080",
+    "start:3000": "./run-local.sh 3000"
+  }
+}
