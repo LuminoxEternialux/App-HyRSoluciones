@@ -48,6 +48,18 @@ https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/
 
 > Si tu repo es privado, GitHub Pages puede requerir plan compatible según tu cuenta.
 
+### Si GitHub Pages te pide dominio (Custom domain)
+
+No necesitas comprar dominio para publicar gratis.
+
+1. Ve a **Settings > Pages**.
+2. En **Custom domain**, deja el campo vacío.
+3. Si aparece un dominio guardado, bórralo y guarda.
+4. Usa el link automático de GitHub Pages:
+   `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`
+
+> Importante: este repositorio no incluye archivo `CNAME`, por lo que está preparado para usar la URL gratuita de GitHub Pages sin dominio propio.
+
 ---
 
 ## Estructura
