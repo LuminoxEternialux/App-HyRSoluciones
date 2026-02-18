@@ -2,7 +2,7 @@ name: Deploy static site to GitHub Pages
 
 on:
   push:
-    branches: ["main", "master", "work"]
+    branches: ["**"]
   workflow_dispatch:
     inputs:
       deploy_ref:

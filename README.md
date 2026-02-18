@@ -65,6 +65,20 @@ No necesitas comprar dominio para publicar gratis.
 
 > Importante: este repositorio no incluye archivo `CNAME`, por lo que está preparado para usar la URL gratuita de GitHub Pages sin dominio propio.
 
+### Si solo te aparece el workflow "pages build and deployment"
+
+Eso normalmente significa que tu repositorio todavía está en **Settings > Pages > Deploy from a branch** (modo clásico), o que el workflow personalizado aún no está en la rama por defecto.
+
+Haz esto:
+
+1. Ve a **Settings > Pages**.
+2. En **Build and deployment**, selecciona **Source: GitHub Actions**.
+3. Asegúrate de que el archivo `.github/workflows/deploy-pages.yml` exista en la **rama por defecto** (main/master).
+4. Si estás trabajando en `work`, haz merge de `work` hacia la rama por defecto o ejecuta manualmente el workflow con `deploy_ref=work`.
+5. Vuelve a **Actions** y valida que aparezca **Deploy static site to GitHub Pages**.
+
+> El workflow "pages build and deployment" es el flujo automático interno de Pages en modo rama. Para usar el deploy controlado por este repositorio debes usar **GitHub Actions** como source.
+
 ### Si desplegó pero se sigue viendo la versión vieja
 
 1. Verifica que el workflow se ejecutó para el commit más reciente.
