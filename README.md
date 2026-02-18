@@ -65,6 +65,22 @@ No necesitas comprar dominio para publicar gratis.
 
 > Importante: este repositorio no incluye archivo `CNAME`, por lo que está preparado para usar la URL gratuita de GitHub Pages sin dominio propio.
 
+### Error 404 en GitHub Pages (File not found)
+
+Si te sale el 404 de Pages, revisa esto en orden:
+
+1. **URL correcta**
+   - Proyecto normal: `https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/`
+   - Solo usa `https://TU-USUARIO.github.io/` si tu repo se llama exactamente `TU-USUARIO.github.io`.
+2. **Rama/ref correcta**
+   - En **Actions > Deploy static site to GitHub Pages > Run workflow**, usa `deploy_ref=work` (o la rama donde están los cambios).
+3. **Último deployment**
+   - En **Settings > Pages**, confirma que el deployment más reciente está en verde y corresponde al último commit.
+4. **Cache del navegador**
+   - Prueba en incógnito o con recarga fuerte (Ctrl+F5 / Cmd+Shift+R).
+
+> Este repositorio ya prepara un artefacto estático con `index.html`, `styles.css`, `script.js`, agrega `.nojekyll` y genera `404.html` automático para evitar errores comunes de publicación.
+
 ### Si solo te aparece el workflow "pages build and deployment"
 
 Eso normalmente significa que tu repositorio todavía está en **Settings > Pages > Deploy from a branch** (modo clásico), o que el workflow personalizado aún no está en la rama por defecto.
